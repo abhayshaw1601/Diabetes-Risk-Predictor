@@ -2,6 +2,8 @@
 
 > **Note:** This project is for informational and educational purposes only. The predictions are not a substitute for professional medical advice, diagnosis, or treatment.
 
+**Demo video:**https://youtu.be/WDubeC_Fvp0
+
 This project is a web application that predicts the risk of diabetes in a patient based on several diagnostic health metrics. It uses a machine learning model trained on the Pima Indians Diabetes Database and provides a simple, user-friendly interface for making predictions.
 
 ## ✨ Features
