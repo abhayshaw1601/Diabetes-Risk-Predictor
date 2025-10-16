@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Risk Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Diabetes Risk Predictor</h1>
+            <button id="darkModeToggle">Dark Mode</button>
+        </div>
+
+        <form id="predictionForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="pregnancies">Pregnancies</label>
+                    <input type="number" id="pregnancies" name="pregnancies" placeholder="e.g., 1" required>
+                </div>
+                <div class="form-group">
+                    <label for="glucose">Glucose</label>
+                    <input type="number" id="glucose" name="glucose" placeholder="e.g., 120" required>
+                </div>
+                <div class="form-group">
+                    <label for="bloodPressure">Blood Pressure</label>
+                    <input type="number" id="bloodPressure" name="bloodPressure" placeholder="e.g., 80" required>
+                </div>
+                <div class="form-group">
+                    <label for="skinThickness">Skin Thickness</label>
+                    <input type="number" id="skinThickness" name="skinThickness" placeholder="e.g., 20" required>
+                </div>
+                <div class="form-group">
+                    <label for="insulin">Insulin</label>
+                    <input type="number" id="insulin" name="insulin" placeholder="e.g., 80" required>
+                </div>
+                <div class="form-group">
+                    <label for="bmi">BMI</label>
+                    <input type="number" step="0.1" id="bmi" name="bmi" placeholder="e.g., 25.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="dpf">Diabetes Pedigree Function</label>
+                    <input type="number" step="0.001" id="dpf" name="dpf" placeholder="e.g., 0.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="e.g., 30" required>
+                </div>
+            </div>
+            <button type="submit" class="predict-btn">Predict</button>
+        </form>
+
+        <div id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+
+        <div id="result">
+            <h2>Prediction</h2>
+            <p>Your result will be displayed here.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
